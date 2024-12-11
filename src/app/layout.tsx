@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import Script from "next/script";
-const GTM_ID = "GTM-XXXX"; 
+const GTM_ID = "GTM-WWBB26M";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,17 +40,17 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','${GTM_ID}');
           `}
         </Script>
-       {
-        /* Google Tag Manager NoScript (for when JavaScript is disabled) */
-        <noscript>
-          <iframe 
-            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-            height="0" 
-            width="0" 
-            style={{ display: 'none', visibility: 'hidden' }}
-          />
-        </noscript>
-      }
+        {
+          /* Google Tag Manager NoScript (for when JavaScript is disabled) */
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+              height='0'
+              width='0'
+              style={{ display: "none", visibility: "hidden" }}
+            />
+          </noscript>
+        }
       </body>
     </html>
   );
