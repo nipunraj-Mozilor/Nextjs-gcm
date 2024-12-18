@@ -31,7 +31,7 @@ export default function RootLayout({
         {children}
 
         {/* Google Tag Manager Script */}
-        <Script id='gtm' strategy='afterInteractive'>
+        {/* <Script id='gtm' strategy='afterInteractive'>
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -39,7 +39,7 @@ export default function RootLayout({
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','${GTM_ID}');
           `}
-        </Script>
+        </Script> */}
         {
           /* Google Tag Manager NoScript (for when JavaScript is disabled) */
           <noscript>
