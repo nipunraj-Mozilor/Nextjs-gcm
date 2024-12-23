@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+import Script from "next/script";
 const GTM_ID = "GTM-WWBB26M";
 
 const geistSans = Geist({
@@ -30,7 +31,7 @@ export default function RootLayout({
         {children}
 
         {/* Google Tag Manager Script */}
-        {/* <Script id='gtm' strategy='afterInteractive'>
+        { <Script id='gtm' strategy='afterInteractive'>
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -38,7 +39,7 @@ export default function RootLayout({
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','${GTM_ID}');
           `}
-        </Script> */}
+        </Script>}
         {
           /* Google Tag Manager NoScript (for when JavaScript is disabled) */
           <noscript>
@@ -47,6 +48,7 @@ export default function RootLayout({
               height='0'
               width='0'
               style={{ display: "none", visibility: "hidden" }}
+              title='Google Tag Manager'
             />
           </noscript>
         }
